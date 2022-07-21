@@ -50,3 +50,27 @@ menuSale = menu.map((item)=>{
 })
 
 console.log(menuSale)
+
+
+// #3 Reduce Method
+
+const newscores = [10,20,60,40,70,90,30]
+const scoresOver50 = newscores.reduce((acc,curr)=>{
+    if (curr > 50){
+        acc++
+    }
+    return acc;
+
+},0)
+
+console.log(scoresOver50 )
+
+
+// Reduce method with object arrays
+
+const playerscores =[
+    {name:"Kent",score:50},  
+    {name:"Ben",score:60},
+    {name:"Kent",score:50},
+    {name:"Ashleigh",score:50},
+    {name:"Kent",score:50}]
