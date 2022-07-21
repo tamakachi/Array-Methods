@@ -104,3 +104,24 @@ const costOver90 = costs.find((cost)=>{
 })
 
 console.log(costOver90)
+
+// #5 Sort
+// Destructive, rearranges an array, sorting it
+
+// Alphabetical sorting
+
+const people = ["Kent","Ben","Ashleigh","Nathan","Shelley","Max"]
+people.sort()
+
+console.log(people)
+
+// Numerical sorting
+// Must use callback function with a,b when sorting numbers 
+// Otherwise it will be prone to error
+// For instance, 9,55,37,91 would be arranged as
+// 37,55,9,91
+
+const marks = [9,55,37,75,69,48,91]
+marks.sort((a,b)=> a-b) //low to high
+//marks.sort((a,b)=> b-a) //high to low
+console.log(marks)
