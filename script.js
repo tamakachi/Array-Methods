@@ -57,6 +57,11 @@ console.log(menuSale)
 // It can find the total number of values with conditions
 // Or it can add numbers (accumulate) and return them
 
+// Remember the final argument after the arrow function
+// The ,0 sets the starting value of acc
+// Without it, the code will bug out
+
+
 const newscores = [10,20,60,40,70,90,30]
 const scoresOver50 = newscores.reduce((acc,curr)=>{
     if (curr > 50){
@@ -87,3 +92,15 @@ kentsTotalScore = playerscores.reduce((acc,curr)=>{
 },0)
 
 console.log(kentsTotalScore + " is Kent's score")
+
+// #4 Find
+// Finds the first value in the array that matches the conditional return
+// Returns that value and then stops
+// It will only ever return one value
+
+const costs = [30,20,60,40,70,100]
+const costOver90 = costs.find((cost)=>{
+    return cost > 90
+})
+
+console.log(costOver90)
