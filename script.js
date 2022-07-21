@@ -53,6 +53,9 @@ console.log(menuSale)
 
 
 // #3 Reduce Method
+// Reduce can be used to accumulate values
+// It can find the total number of values with conditions
+// Or it can add numbers (accumulate) and return them
 
 const newscores = [10,20,60,40,70,90,30]
 const scoresOver50 = newscores.reduce((acc,curr)=>{
@@ -74,3 +77,13 @@ const playerscores =[
     {name:"Kent",score:50},
     {name:"Ashleigh",score:50},
     {name:"Kent",score:50}]
+
+kentsTotalScore = playerscores.reduce((acc,curr)=>{
+    if (curr.name==="Kent"){
+        acc += curr.score
+    }
+    return acc
+
+},0)
+
+console.log(kentsTotalScore + " is Kent's score")
